@@ -1,0 +1,115 @@
+{
+  "info": {
+    "name": "Sanjivani IT Dept - Practical 08 Chatbot & Prompt Engineering Collection",
+    "description": "Postman collection for testing Multi-Turn Conversational AI & Prompt Engineering REST Endpoints",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Flask - Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:5000/health",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "5000",
+          "path": ["health"]
+        }
+      }
+    },
+    {
+      "name": "Flask - College Inquiry Chatbot",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"message\": \"What are the eligibility criteria for B.Tech admission?\",\n  \"session_id\": \"postman_college_session\"\n}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/chat/college",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "5000",
+          "path": ["chat", "college"]
+        }
+      }
+    },
+    {
+      "name": "Flask - Healthcare Assistant Chatbot",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"message\": \"I have a mild fever and cough since yesterday.\",\n  \"session_id\": \"postman_health_session\"\n}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/chat/healthcare",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "5000",
+          "path": ["chat", "healthcare"]
+        }
+      }
+    },
+    {
+      "name": "Flask - Prompt Technique Test",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"technique\": \"few-shot\",\n  \"prompt\": \"What are the B.Tech course fees?\"\n}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/prompt/test",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "5000",
+          "path": ["prompt", "test"]
+        }
+      }
+    },
+    {
+      "name": "FastAPI - College Inquiry Chatbot",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"message\": \"What is the fee structure for Open category?\",\n  \"session_id\": \"fastapi_college_session\"\n}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/chat/college",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "8000",
+          "path": ["chat", "college"]
+        }
+      }
+    }
+  ]
+}
